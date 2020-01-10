@@ -1,0 +1,107 @@
+/*Login*/
+.card h1 {
+  text-align: center;
+  border-bottom: 1px solid #909090;
+  margin: 0 auto;
+  display: table;
+  padding-bottom: 10px;
+  width: 70%;
+}
+
+.card {
+  box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+}
+
+button#sendlogin {
+  padding: 10px 30px;
+  margin: 0 auto;
+  display: table;
+  background: #909090;
+  border: 1px solid #909090;
+}
+
+button#sendlogin:hover {
+  background: #fff;
+  color: #909090;
+}
+/*Cadastro*/
+a.sair {
+  background: #e9e9e9;
+  padding: 6px 15px 8px 15px;;
+  border-radius: 5px;
+  color: #000;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+a.sair:hover {
+  background: #1f1d1d;
+  color: #e9e9e9;
+}
+
+li.logout {
+  margin-top: 15px;
+  position: absolute;
+  right: 30px;
+}
+/*Lista*/
+.dt-buttons {
+  position: relative;
+  float: left;
+}
+/*Reserva*/
+.reservas li {
+  list-style-type: none;
+}
+/*home*/
+.home i {
+  display: table;
+  margin: 0 auto;
+  line-height: inherit;
+}
+a.nav-link.home1 {
+  margin-top: 18px;
+  font-size: 20px;
+  margin-right: 20px;
+}
+ul.nav-tabs {
+  margin-left: 0;
+  position: relative;
+  top: 1px;
+}
+.nav-tabs>li {
+  float: left;
+  margin-bottom: -1px;
+  margin-bottom: 15px;
+}
+.nav-tabs>li>a, .nav-tabs>li>a:focus {
+  border-radius: 0!important;
+  border-color: #c5d0dc;
+  background-color: #F9F9F9;
+  color: #999;
+  margin-right: 25px;
+  line-height: 5px;
+  position: relative;
+  text-decoration: none;
+}
+.nav-tabs>li.active>a, .nav-tabs>li>a:hover, .nav-tabs>li>a:focus {
+  color: #576373;
+  border-color: #c5d0dc;
+  border-top: 2px solid #4c8fbd;
+  border-bottom-color: transparent;
+  background-color: #FFF;
+  z-index: 1;
+  line-height: 18px;
+  margin-top: 25px;
+  box-shadow: 0 -2px 3px 0 rgba(0,0,0,.15);
+}
+div#ocultar {
+  padding-top: 56px;
+}
+.dataTables_filter {
+  margin-top: 10px;
+}
+.dt-buttons {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
