@@ -7,7 +7,7 @@ class Funcionario_model extends Usuario_model {
 
 	private $id_funcionario;
 	private $usuario_id_usuario;
-
+	
 	public function __construct() {
 		parent::__construct();
 		$this->load->model("Acesso_model", "acesso");

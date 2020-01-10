@@ -85,7 +85,7 @@ class Checkout_model extends CI_Model implements IDataTable {
         return $result;
 	}
 	public function listaDataTableTwo() {}
-
+	
 	public function usuarioRegistrado($id) {
 
 		$this->db->select('*');

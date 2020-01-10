@@ -11,7 +11,7 @@ class Taxa_model extends CI_Model {
 	public function __construct() {
 		parent::__construct();
 	}
-
+	
 	public function getIdTaxa() {
 		return $this->id_taxa;
 	}

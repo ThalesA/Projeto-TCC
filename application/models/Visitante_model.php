@@ -15,7 +15,7 @@ class Visitante_model extends Usuario_model {
 	public function __construct() {
 		parent::__construct();
 	}
-
+	
 	public function getIdVisitante() {
 		return $this->id_visitante;
 	}

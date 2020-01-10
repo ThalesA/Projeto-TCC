@@ -5,7 +5,7 @@ class Endereco_model extends CI_Model {
 	private $id_endereco;
 	private $rua;
 	private $lote;
-
+	
 	public function __construct() {
 		parent::__construct();
 	}

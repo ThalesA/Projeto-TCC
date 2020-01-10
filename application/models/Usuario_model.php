@@ -134,7 +134,6 @@ class Usuario_model extends CI_Model implements IDataTable {
 		$this->db->where("DATE_FORMAT(c.data_checkin, '%Y-%m-%d') = CURDATE()");
 		$this->db->order_by("c.data_checkin",'asc');
 
-
 		$query = $this->db->get();
         $result['colunas'] = $colunas;
         $result['linhas'] = $query->result_array();

@@ -13,7 +13,7 @@ class Tipo_multa_model extends CI_Model {
 	public function getIdTipoMulta() {
 		return $this->id_tipo_multa;
 	}
-
+	
 	public function getTipoMulta() {
 		return $this->tipo_multa;
 	}

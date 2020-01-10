@@ -11,7 +11,7 @@ class Morador_model extends Usuario_model {
 	private $placa;
 	private $possui;
 	private $ativo;
-
+	
 	public function __construct() {
 		parent::__construct();
 		$this->load->model("Acesso_model", "acesso");
