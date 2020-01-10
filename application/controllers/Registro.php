@@ -14,7 +14,7 @@ class Registro extends CI_Controller {
         $this->load->model("Usuario_model", "usuario");
 		
 	}
-
+    
     public function verificaDocs($cpf='') {
         $doc = $this->documento->selectUsuarioCPF($cpf);
         if(!empty($this->usuario->listarVisitanteCpf($doc[0]['id_documento']))){
