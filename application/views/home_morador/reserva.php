@@ -29,7 +29,7 @@
 					<li><p><i class="fa fa-check-circle-o" aria-hidden="true"></i> <strong><?= $value['nome_reserva'] ?></strong> agendado na data <strong><?= formataDataToView($value['dia_reserva']) ?></strong></p></li>
 				<?php endforeach ?>
 			</ul>
-			
+		
 		</div>
 	</div>
 </div>

@@ -3,7 +3,6 @@
   print validation_errors();
   echo form_open("multa/salvarTipoMulta");
 ?> 
-
 <div class="form-group">
   <?php
     echo form_label("Tipo multa", "tipo_multa");

@@ -2,7 +2,7 @@
     <h1>Condomínio</h1>
     <div id="carousel-controles" class="carousel slide" data-ride="carousel"><!--Carousel -->
         <div class="carousel-inner"><!--Inner -->
-      
+    
             <div class="carousel-item active">
                 <img src="<?= base_url("img/casa.jpg") ?>" class="img-fluid">
             </div>

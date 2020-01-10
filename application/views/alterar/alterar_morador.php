@@ -3,7 +3,6 @@
     print validation_errors();
     $hidden = array('id' => $this->uri->segment(3));
     echo form_open("usuario/alterarMorador", array('class' => 'form-horizontal'),$hidden);
-    //print_r($usuario);
   ?>
 <div class="row">
   <div class="col-md-6">

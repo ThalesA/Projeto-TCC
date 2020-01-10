@@ -10,7 +10,7 @@
         <link rel="stylesheet" type="text/css" href="<?= base_url("css/font-awesome.css") ?>">
         <link rel="stylesheet" type="text/css" href="<?= base_url("css/font-awesome.min.css") ?>">
         <script src="<?= base_url("js/jquery-3.4.1.min.js") ?>"></script>
-		
+	
 	</head>
 	<body>
 		<?php if($this->session->userdata("usuario_logado")) : ?>

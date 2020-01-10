@@ -21,7 +21,7 @@
 			    "order": [],				
                     "language": {
                         "url": "<?= base_url('ace-assets/js/dataTable-portugues.json'); ?>",
-                        
+                       
                     },
 					dom: 'Bfrtip',
 						buttons: [

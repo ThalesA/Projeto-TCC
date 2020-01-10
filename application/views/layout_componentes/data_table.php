@@ -15,7 +15,6 @@
             }
             $action = $this->router->fetch_method();
 
-
             foreach ($tabela['colunas'] as $key => $valor) {?>
                 <th><?= $valor; ?></th>
             <?php } ?>    <!-- adicionado o if(exibeAcoes==false) para poder aparecer os campos editar e excluir! -->

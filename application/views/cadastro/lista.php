@@ -1,7 +1,4 @@
 <div class="lista mt-5">
-<?php 
-	//print_r($usuarios);
-?>	
 	<table id="example" class="display" style="width:100%">
         <thead>
             <tr>
