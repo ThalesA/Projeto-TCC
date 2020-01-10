@@ -9,7 +9,7 @@ class Multa extends CI_Controller {
 		$this->load->model("Multa_model", "multa");
 		$this->load->model("Tipo_multa_model", "tipo_multa");
 	}
-
+	
 	public function salvarMulta() {
 		$form = $this->input->post(NULL, TRUE);
 

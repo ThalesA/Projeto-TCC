@@ -9,7 +9,7 @@ class Taxa extends CI_Controller {
 		$this->load->model("Taxa_model", "taxa");
 		$this->load->model("Multa_model", "multa");
 	}
-
+	
 	public function salvarTaxa() {
 		$form = $this->input->post(NULL, TRUE);
 	

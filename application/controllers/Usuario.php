@@ -16,7 +16,7 @@ class Usuario extends CI_Controller {
 		$this->load->model("Checkin_model", "checkin");
 		$this->load->model("Tipo_multa_model", "tipo");
 	}
-
+	
 	public function principal() {
 		autoriza();
 		$usuario = autoriza();

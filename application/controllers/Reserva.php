@@ -8,7 +8,7 @@ class Reserva extends CI_Controller {
 		$this->load->model("Tipo_reserva_model", "tipo");
 		$this->load->model("Reserva_model", "reserva");
 	}
-
+	
 	public function reservar() {
 
 		$tipo_reserva = $this->tipo->listarTipoReserva();
