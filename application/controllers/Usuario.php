@@ -16,7 +16,7 @@ class Usuario extends CI_Controller {
 		$this->load->model("Checkin_model", "checkin");
 		$this->load->model("Tipo_multa_model", "tipo");
 	}
-	
+
 	public function principal() {
 		autoriza();
 		$usuario = autoriza();
@@ -225,8 +225,7 @@ class Usuario extends CI_Controller {
 				$this->endereco->setIdEndereco($form['id_endereco']);
 				$this->endereco->setRua($form['rua']);
 				$this->endereco->setLote($form['lote']);
-				//print_r($form);
-				//die();
+
 				if($this->morador->alterarMorador() != TRUE) {
 	                $this->session->set_flashdata("success", "Dados alterados com sucesso!");
 	            } else {

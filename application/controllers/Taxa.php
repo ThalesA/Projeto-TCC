@@ -9,7 +9,7 @@ class Taxa extends CI_Controller {
 		$this->load->model("Taxa_model", "taxa");
 		$this->load->model("Multa_model", "multa");
 	}
-	
+
 	public function salvarTaxa() {
 		$form = $this->input->post(NULL, TRUE);
 	
@@ -22,8 +22,6 @@ class Taxa extends CI_Controller {
 		$sucesso = $this->form_validation->run();
 
 		if($sucesso) {
-			//print_r($form);
-			//die();
 			date_default_timezone_set('America/Sao_Paulo');
 			$taxa = $this->taxa->taxaMes($form['data_vencimento'],$form['id_usuario']);
 			$dataProximo = date('Y-m-d', strtotime('+1 months', strtotime($taxa[0]['data_vencimento'])));

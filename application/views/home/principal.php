@@ -1,8 +1,4 @@
-<div class="ajax-result">
-<?php
-
-print validation_errors();
-
+<?php 
 print form_open("registro/registrar", array('class' => 'form-horizontal'));
 ?>
     <div class="row">
@@ -25,7 +21,7 @@ print form_open("registro/registrar", array('class' => 'form-horizontal'));
                                 'name' => 'cpf',
                                 'id' => 'cpf',
                                 'class' => 'form-control col-xs-10 col-sm-12',
-                                'value' => @$usuario[0]['cpf'],
+                                'value' => '',
                                 'maxlength' => '20',
                                 'size' => '10'
                             ));
@@ -47,7 +43,7 @@ print form_open("registro/registrar", array('class' => 'form-horizontal'));
                                 'name' => 'rg',
                                 'id' => 'rg',
                                 'class' => 'form-control col-xs-10 col-sm-12',
-                                'value' => @$usuario[0]['rg'],
+                                'value' => '',
                                 'maxlength' => '20',
                                 'size' => '10'
                         ));
@@ -68,7 +64,7 @@ print form_open("registro/registrar", array('class' => 'form-horizontal'));
                             array(
                                 'name' => 'nome',
                                 'id' => 'nome',
-                                'value' => @$usuario[0]['nome'],
+                                'value' => '',
                                 'maxlength' => '100',
                                 'size' => '50',
                                 'class' => 'form-control col-xs-10 col-sm-12'                 
@@ -237,7 +233,6 @@ print form_open("registro/registrar", array('class' => 'form-horizontal'));
 <?php
 print form_close();
 ?>
-
 <div class="tabbable">
     <ul class="nav nav-tabs" id="myTab">
     
@@ -265,34 +260,18 @@ print form_close();
     </ul>   
     <div class="tab-content">
         <div id="entradas-corrente" class="tab-pane fade active in" aria-expanded="true">
-             <?= @$grid_entradas ?>
+             <?= $grid_entradas ?>
         </div>
         
         <div id="historico-saidas" class="tab-pane fade">
-                 <?= @$data_table_historico; ?>     
+                 <?= $data_table_historico; ?>     
         </div>
         <div id="entradas-sem-baixa" class="tab-pane fade">
-                 <?= @$grid_sem_baixa; ?>     
+                 <?= $grid_sem_baixa; ?>     
         </div>                  
     </div>
 </div>
-</div>
-<script>
-    $(document).ready(() => {
-        $('#cpf').on('blur', () => {
-            //e.preventDefault();
-            let cpf = $('#cpf').val();
-            $.ajax({
-                url: '<?= base_url('index.php/registro/verificaDocs'); ?>/'+cpf+'',
-                type: 'GET',                          
-                success: function(result){                              
-                    $('.ajax-result').empty().hide(100);
-                    $('.ajax-result').html(result).fadeIn(150);
-                }
-            });
-        });
-    });
-</script>
+
 
 <script>
 

@@ -85,21 +85,4 @@ class Checkout_model extends CI_Model implements IDataTable {
         return $result;
 	}
 	public function listaDataTableTwo() {}
-	
-	public function usuarioRegistrado($id) {
-
-		$this->db->select('*');
-		$this->db->from('tb_usuario u');
-		$this->db->join('tb_acesso a', 'u.id_usuario = a.tb_usuario_id_usuario');
-		$this->db->join('tb_checkin i', 'i.tb_acesso_id_acesso = a.id_acesso');
-		$this->db->join('tb_checkout c', 'i.id_checkin = c.id_checkin', 'left');
-		$this->db->join('tb_documento d', 'u.tb_documento_id_documento = d.id_documento');
-		$this->db->where('d.id_documento', $id);
-		$this->db->where('c.id_checkin IS NULL');
-
-		$result = $this->db->get();
-		$result = $result->result_array();
-		return $result;
-
-	}
 }

@@ -9,7 +9,7 @@ class Tipo_reserva_model extends CI_Model {
 	public function __construct() {
 		parent::__construct();
 	}
-	
+
 	public function getIdTipoReserva() {
 		return $this->id_tipo_reserva;
 	}

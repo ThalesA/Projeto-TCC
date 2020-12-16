@@ -11,7 +11,7 @@ class Tipo_Reserva extends CI_Controller {
 		autoriza();
 		$this->load->template("cadastro/reserva");
 	}
-	
+
 	public function salvarReserva() {
 		$form = $this->input->post(NULL, TRUE);
 

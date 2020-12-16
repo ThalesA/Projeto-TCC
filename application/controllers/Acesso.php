@@ -69,8 +69,7 @@ class Acesso extends CI_Controller {
 			$usuario = $this->session->userdata("perfil_usuario");
 			$id_usuario = $usuario[0]['usuario_id_usuario'];
 			$ativo = $usuario[0]['ativo'];
-			//print_r($ativo);
-			//die();
+
 			if($this->acesso->alterarSenha($id_usuario) == TRUE ) {
 				if ($ativo == 0) {
 					$this->morador->ativarSenha($id_usuario);

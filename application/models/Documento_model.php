@@ -5,7 +5,7 @@ class Documento_model extends CI_Model {
 	private $id_documento;
 	private $cpf;
 	private $rg;
-	
+
 	public function __construct() {
 		parent::__construct(); 
 	}

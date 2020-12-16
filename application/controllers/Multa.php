@@ -9,7 +9,7 @@ class Multa extends CI_Controller {
 		$this->load->model("Multa_model", "multa");
 		$this->load->model("Tipo_multa_model", "tipo_multa");
 	}
-	
+
 	public function salvarMulta() {
 		$form = $this->input->post(NULL, TRUE);
 
@@ -22,8 +22,6 @@ class Multa extends CI_Controller {
 		$sucesso = $this->form_validation->run();
 
 		if($sucesso) {
-			//print_r($form);
-			//die();
 			$this->multa->setObc($form['obc']);
 			$this->multa->setIdUsuario($form['id_usuario']);
 			$this->multa->setIdTipoMulta($form['id_tipo_multa']);
@@ -53,8 +51,6 @@ class Multa extends CI_Controller {
 		$sucesso = $this->form_validation->run();
 
 		if($sucesso) {
-			//print_r($form);
-			//die();
 			$this->tipo_multa->setTipoMulta($form['tipo_multa']);
 			$this->tipo_multa->setValorMulta($form['valor_multa']);
 			if($this->tipo_multa->salvarTipoMulta() == TRUE)

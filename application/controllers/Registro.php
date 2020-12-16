@@ -14,21 +14,8 @@ class Registro extends CI_Controller {
         $this->load->model("Usuario_model", "usuario");
 		
 	}
-    
-    public function verificaDocs($cpf='') {
-        $doc = $this->documento->selectUsuarioCPF($cpf);
-        if(!empty($this->usuario->listarVisitanteCpf($doc[0]['id_documento']))){
-            $dados['usuario'] = $this->usuario->listarVisitanteCpf($doc[0]['id_documento']);
-        } else {
-            $dados['usuario'] = $this->usuario->listarMoradorCpf($doc[0]['id_documento']);
-        }
-        //print_r($dados['usuario']);
-        $this->load->view('home/principal', $dados);
-    
-    }
 
 	public function registrar() {
-		//$_POST
         $dadosForm = $this->input->post(NULL, TRUE);
 		
         //carrega a biblioteca de validação de campo
@@ -60,8 +47,7 @@ class Registro extends CI_Controller {
                         $doc = $this->documento->selectUsuarioCPF($dadosForm['cpf']);
                         $morador = $this->usuario->listarMoradorCpf($doc[0]['id_documento']);
                         $visitante = $this->usuario->listarVisitanteCpf($doc[0]['id_documento']);
-                        //print_r($visitante);
-                        //die();
+
                         if (!empty($morador)) {
                             $this->checkin->setIdAcesso($morador[0]['id_acesso']);    
                         }
@@ -70,11 +56,6 @@ class Registro extends CI_Controller {
                         }
                         $this->checkin->setNumeroCartao($dadosForm['numero']);
                         $this->checkin->setPerfilUsuario(autoriza()['tb_usuario_id_usuario']);
-                        $registrado = $this->checkout->usuarioRegistrado($doc[0]['id_documento']);
-                        if (!empty($registrado)) {
-                            $this->session->set_flashdata("danger", "Entrada de usuário já registrada!");
-                            return false;
-                        } 
                         if ($this->checkin->entrada()) {
                             $this->session->set_flashdata("success", "Entrada registrada!");
                         } else {
